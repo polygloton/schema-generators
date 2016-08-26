@@ -43,7 +43,7 @@
 
       ::schema.spec.collection/remaining
       (do (macros/assert! (= 2 (count e)) "remaining can have only one schema.")
-          (generators/vector (sub-generator (second e) params))))
+          (generators/vector (sub-generator (second e) params) 0 6)))
     (generators/fmap vector (sub-generator e params))))
 
 (defn elements-generator [elts params]
